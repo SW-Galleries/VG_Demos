@@ -1,0 +1,286 @@
+@import url('normalize.css');
+
+body {
+    background-color: #6F5499; // main background color
+    color: white;
+}
+
+.header {
+    height: 100px;
+    background-color: black;
+    margin: 0;
+    padding: 0;
+    border-bottom: solid 4px #FF68C7;
+    vertical-align: bottom;
+    h1 {
+        color: #ededed;
+        text-align:center;
+        padding:0;
+        margin:0;
+        font-size: 4.5em;
+    }
+
+}
+
+footer {
+    height:100px;
+}
+
+#wrapper {
+    width: 300px; // this sets the width of the module up to max-width
+    max-width: 80%;
+    display:block;
+    position:relative;
+    margin:auto;
+    &:before {
+        content: "";
+        display: block;
+        padding-top: 200%; //this sets the height of the module relative to its width
+    }
+}
+
+
+#flyersDiv {
+    width: 100%;
+    height: 100%;
+    position:absolute;
+    top:0;
+    left:0;
+    margin-top:15%;
+    padding:0;
+    font-family: Arial, serif;
+    background: #CCB8C4;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 1.2em;
+    color: #333;
+    border-radius: 2%;
+    -webkit-font-smoothing: antialiased;
+    border: solid 1px white;
+    // a {
+    //     color: #555;
+    //     text-decoration: none;
+    // }
+
+    ul.wi-container {
+        width: 95%;
+        height: 90%;
+        position: relative;
+        margin: 2% auto 0 auto;
+        padding: 0;
+        list-style-type: none; 
+        -webkit-perspective: 1400px;
+        -moz-perspective: 1400px;
+        -ms-perspective: 1400px;
+        -o-perspective: 1400px;
+        perspective: 1400px;
+        border-radius: 5px;
+        .ion-loading-a {
+            // font-size: 96em;
+            position:absolute;
+            top:50%;
+            left:50%;
+        }
+        &::before, 
+        &::after {
+            content: '';
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            background: white;
+            left: 0;
+            box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.1);
+            border-radius: 5px;
+        }
+        &::before {
+            top: 10px;
+            z-index: -2;
+            box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.2);
+        }
+        &::after {
+            top: 7px;
+            z-index: -1;
+        }
+        .wi-move {
+            pointer-events: none;
+            -webkit-transition: -webkit-transform 600ms ease, opacity 600ms ease, left 600ms ease, top 600ms ease;
+            -moz-transition: -moz-transform 600ms ease, opacity 600ms ease, left 600ms ease, top 600ms ease;
+            -o-transition: -o-transform 600ms ease, opacity 600ms ease, left 600ms ease, top 600ms ease;
+            -ms-transition: -ms-transform 600ms ease, opacity 600ms ease, left 600ms ease, top 600ms ease;
+            transition: transform 600ms ease, opacity 600ms ease, left 600ms ease, top 600ms ease;
+        }
+        li {
+            border-radius: 5px;
+            -webkit-user-select: none;
+            -khtml-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+            width: 100%;
+            height: 100%;
+            display: none;
+            margin: 0;
+            position: absolute;
+            top: 0;
+            left: 0;
+            background: #fff;
+            padding: 5%;
+            pointer-events: auto;
+            overflow:auto;
+            .imgWrapper {
+                position: relative;
+                display: block;
+                height:69%;
+                margin: 0 auto;
+                width: 100%;
+                box-shadow: 0 0 1px 1px rgba(255,255,255,0.6), 0 0 0 4px rgba(0,0,0,0.1);
+                background-position: center center;
+                background-size: cover;
+                background-color: black;
+                .icon {
+                    position:absolute;
+                    bottom:0;
+                    right:0;
+                    font-size: 3em;
+                    background-color: #6F5499;
+                    opacity: 0.6;
+                    border-radius:5px;
+                }
+                .ion-ios7-videocam { color : #FF68C7; }
+                .ion-ios7-camera { color : #FF68C7; }
+                .ion-social-twitter { color : cyan; }
+                .ion-social-facebook { color : blue; }
+                .ion-social-youtube { color : red; }
+            }
+            h4 {
+                height: 6%;
+                overflow-x: auto;
+                padding:2px;
+                border-bottom: 1px solid #f0f0f0;
+                overflow: hidden;
+                color: #666;
+                font-size: 14px;
+                margin: 1.1em 0;
+            }
+            .info.text{
+                display:block;
+                tag {
+                    color: darkcyan;
+                }
+                a {
+                    color: blue;
+                    text-decoration: underline;
+                }
+                p {
+                    font-size: 12px;
+                    font-weight: bold;
+                    padding: 0;
+                    margin: 0;
+                }
+            }
+        }
+    }
+    nav {
+        position: relative;
+        height:10%;
+        width:95%;
+        margin: 1% auto 1% auto;
+        div {
+            position: absolute;
+            // width: 37%;
+            height: 55%;
+            margin: 22 4px;
+            background-size: 35% 35%;
+
+            border: solid 3px white;
+            width: 30%;
+            box-shadow: 0px 1px 1px 0px rgba(0, 0, 0, 0.5);
+            // text-indent: -9000px;
+            cursor: pointer;
+            border-radius: 10%;
+            -webkit-user-select: none;
+            -khtml-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+            padding:0;
+            // position: relative;
+            top: 50%;
+            -webkit-transform: translateY(-50%);
+            -ms-transform: translateY(-50%);
+            transform: translateY(-50%);
+            text-align: center;
+            i {
+                position: relative;
+                top: 50%;
+                -webkit-transform: translateY(-50%);
+                -moz-transform: translateY(-50%);
+                -ms-transform: translateY(-50%);
+                -o-transform: translateY(-50%);
+                color: white;
+                font-weight: bolder;
+                font-size: 1.5em;
+            }
+        }
+            #nav-prev{
+              // position: absolute;
+              // background: url(../img/carat-l-black.png) no-repeat 50% 50%;
+                          border-radius: 15px;
+              // background-size: 35% 35%;
+              left: 0;
+              // border-radius: 10px;
+              // border: solid 1px white;
+              // background-color: rgba(206, 236, 248, 0.41);
+              // width: 30%;
+              // box-shadow: 0px 1px 1px 0px rgba(0, 0, 0, 0.5)
+              &:hover{
+                background-color: #6F5499;
+              }
+            }
+            #nav-next{
+              // position: absolute;
+              // background: url(../img/carat-r-black.png) no-repeat 50% 50%;
+                                        border-radius: 15px;
+              // background-size: 35% 35%;
+              right: 0;
+              // border-radius: 10px;
+              // border: solid 1px white;
+              // background-color: rgba(206, 236, 248, 0.41);
+              // width: 30%;
+                &:hover{
+                  background-color: #6F5499;
+              }
+            }
+            #record-button{
+              left: 35%;
+                &:hover{
+                  background-color: #6F5499;
+              }
+            }
+    }
+}
+
+
+
+@media only screen and (max-width: 400px) {
+
+    #wrapper{
+        margin-top: 100px; 
+        margin-bottom:100px;
+        &:before {
+        padding-top: 175%; 
+        }
+    }
+
+    #flyersDiv ul.wi-container {
+    margin-left: auto;
+    margin-right: auto;
+        li .imgWrapper {
+            height:70%;
+            .info.text{
+            height: 16%;
+            }
+        }
+    }
+
+}

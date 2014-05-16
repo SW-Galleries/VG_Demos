@@ -1,0 +1,339 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title> Gallery Demos</title>
+
+<link rel="stylesheet" type="text/css" href="demos/Flyers_V2/css/ionicons.min.css" />
+
+    <link rel="stylesheet" href="css/reset.css" type="text/css" media="screen" />
+    <!-- <link rel="stylesheet" href="css/demo.css" type="text/css" media="screen" /> -->
+    <link rel="stylesheet/less" type="text/css" href="css/demo.less" />
+    <script src="js/less-1.7.0.min.js" type="text/javascript"></script>
+
+    <!-- <link rel="stylesheet" href="css/jquery-ui-1.10.4.custom.min.css" type="text/css" media="screen" />
+    <script src="js/jquery-ui-1.10.4.custom.min.js" type="text/javascript"></script> -->
+
+
+    <link href="lightbox/css/lightbox.css" rel="stylesheet" />
+    <!-- <link href='http://fonts.googleapis.com/css?family=Open+Sans|Baumans' rel='stylesheet' type='text/css'/> -->
+
+    <script src="js/modernizr-latestdevfull.js"></script>
+    <script src="js/respond.min.js"></script>
+
+    <!-- include extern jQuery file but fall back to local file if extern one fails to load !-->
+    <script src="http://code.jquery.com/jquery-1.7.2.min.js"></script>
+    <!--<script type="text/javascript">window.jQuery || document.write('<script type="text\/javascript" src="js\/1.7.2.jquery.min"><\/script>')</script>-->
+
+    <script src="lightbox/js/lightbox.js"></script>
+    <!-- // <script src="js/prefixfree.min.js"></script> -->
+    <script src="js/jquery.slides.min.js"></script>
+
+
+    <script>
+    $(function() {
+
+        window.setTimeout(function(){
+          $( "#toggle" ).toggle( "slide" );
+        },3000);
+
+
+      $('#slides').slidesjs({
+        height: 235,
+        navigation: false,
+        pagination: false,
+        effect: {
+          fade: { speed: 400 }
+        }, 
+        callback: {
+          start: function(number) {
+            $("#slider_content1,#slider_content2,#slider_content3").fadeOut(500);},
+          complete: function(number) {
+            $("#slider_content" + number).delay(500).fadeIn(1000);
+          }
+        },
+        play: {
+          active: false,
+          auto: true,
+          interval: 6000,
+          pauseOnHover: false
+        }
+      });
+      $("#alternative_menu").change(function() {
+        $selected = $("#alternative_menu option:selected");
+        window.location.href = "http://www.lingulo.com/" + $selected.val();
+      });
+    });
+    </script>
+
+  </head>
+
+  <body>
+
+    <header>
+
+      <h1> Social Content Galleries </h1>
+<!--       <p> A Hack Reactor project for Video Genie </p> -->
+      <nav>
+        <ul>
+          <li><a href="demos/Flyers_V2/flyers.html">Flyers</a></li>
+          <li><a href="demos/Sliders/sliders.html">Sliders</a></li>
+          <li><a href="demos/Tilers/tilers.html">Tilers</a></li>
+          <li><a href="demos/Accordion/Accordion.html">Accordion</a></li>
+          <li><a href="demos/Bubbles/Bubbles.html">Gravity Bubbles</a></li>
+          <li><a href="http://willdevelops.com/bubblewall.html">Bubble Wall</a></li>
+          <li><a href="demos/Flippers_slidedown/flippers.html">Sliding Flippers</a></li>
+          <li><a href="demos/Flippers_scrollable/flippers.html">Scrollable Wall</a></li>
+          <li><a href="demos/Flyers_V1/flyers.html">Flyers Demo</a></li>
+
+        </ul>
+      </nav>
+
+    </header>
+
+    <div class="headerPlacement">
+    </div>
+
+    
+    
+<!--       <section class="container">
+        <h2 class="hidden">Lorem Ipsum</h2>
+            <article id="slider_content1" class="sliderContent">some article 1</article>
+            <article id="slider_content2" class="sliderContent">some article 2</article>
+            <article id="slider_content3" class="sliderContent">some article 3</article>
+            <div id="slides">
+            <img src="img/Project Goals.png" alt="Some alt text">
+            <img src="img/Project Planning.png" alt="Some alt text">
+            <img src="img/Project Goals.png" alt="Some alt text"></div>
+      </section> -->
+
+    <section class="spacer">
+      <h2 class="hidden">Dolor sit amet</h2>
+      <p> Prototypes </p>
+    </section>
+
+    <section id="four_columns" style="margin-top:3%;">
+   <!--    <h2> </h2> -->
+      <article class="img-item">
+        <h3 class="hidden">Bubbles</h3>
+        <figure>
+          <a href="img/example-slide-1.jpg" rel="lightbox" title="Some Title">
+            <div>
+              <span class="thumb-screen"></span>
+              <img src="img/Gravity_Bubbles.png" width="100px" height="100px">
+            </div>
+          </a>
+          <figcaption>
+            <strong> Gravity Bubbles </strong>
+            <p>Interactive - Playfull - Unusual</p>
+            <p>Using SVG and D3 force layout</p>
+          </figcaption>
+        </figure>
+      </article>
+      <article class="img-item">
+        <h3 class="hidden">Accordion</h3>
+        <figure>
+          <a href="img/example-slide-2.jpg" rel="lightbox" title="Some Title">
+            <div>
+            <span class="thumb-screen"></span>
+            <img src="img/Accordion.png" width="180px" height="70px">
+            </div>
+          </a>
+          <figcaption>
+            <strong> Accordion</strong>
+            <p> Condensed - Exploratory - Unusual </p>
+            <p>Using Canvas and D3 fisheye</p>
+          </figcaption>
+        </figure>
+        </article>
+      <article class="img-item">
+        <h3 class="hidden">Scrolling Flippers</h3>
+        <figure>
+          <a href="img/example-slide-3.jpg" rel="lightbox" title="Some Title">
+            <div>
+              <span class="thumb-screen"></span>
+              <img src="img/Sliding_Flippers.png" width="180px" height="30px">
+            </div>
+          </a>
+          <figcaption>
+            <strong>Sliding Flippers</strong>
+            <p> Ergonomical - Minimalist - Designful </p>
+            <p> Using CSS3 </p>
+          </figcaption>
+        </figure>
+      </article>
+      <article class="img-item">
+        <h3 class="hidden">Scrolling Flippers</h3>
+        <figure>
+          <a href="img/example-slide-4.jpg" rel="lightbox" title="Some Title">
+            <div>
+              <span class="thumb-screen"></span>
+              <img src="img/Scrollable_Wall.png" width="180px" height="70px">
+            </div>
+        </a>
+          <figcaption>
+            <strong> Scrollable Wall</strong>
+            <p> Ergonomical - Condensed - Designful </p>
+            <p> Using CSS3 </p>
+          </figcaption>
+        </figure>
+      </article>
+      <br class="clear"/>
+    </section>
+
+
+    <section id="four_columns" style="margin-top:3%;">
+   <!--    <h2> </h2> -->
+      <article class="img-item">
+        <h3 class="hidden">Sliders</h3>
+        <figure>
+          <a href="img/example-slide-1.jpg" rel="lightbox" title="Some Title">
+            <div>
+              <span class="thumb-screen"></span>
+              <img src="img/Sliders.png" width="180px" height="60px">
+            </div>
+          </a>
+          <figcaption>
+            <strong> Sliders </strong>
+            <p>Interactive - Layout Efficient</p>
+            <p>Using D3</p>
+          </figcaption>
+        </figure>
+      </article>
+      <article class="img-item">
+        <h3 class="hidden">Flyers Demo</h3>
+        <figure>
+          <a href="img/example-slide-2.jpg" rel="lightbox" title="Some Title">
+            <div>
+              <span class="thumb-screen"></span>
+              <img src="img/Flyers_Demo.png" width="60px" height="120px">
+            </div>
+          </a>
+          <figcaption>
+            <strong> Flyers</strong>
+            <p> Minimalist - Playfull </p>
+            <p> Using CSS and javascript</p>
+          </figcaption>
+        </figure>
+        </article>
+      <article class="img-item">
+        <h3 class="hidden">Scrolling Flippers</h3>
+        <figure>
+          <a href="img/example-slide-3.jpg" rel="lightbox" title="Some Title">
+            <div>
+              <span class="thumb-screen"></span>
+              <img src="img/Tilers.png" width="180px" height="120px">
+            </div>
+          </a>
+          <figcaption>
+            <strong>Tilers</strong>
+            <p> Designful - Modern - Hip - Layout Efficient </p>
+            <p> Using Masonry.js </p>
+          </figcaption>
+        </figure>
+      </article>
+<!--       <article class="img-item">
+        <h3 class="hidden">Scrolling Flippers</h3>
+        <figure>
+          <a href="img/example-slide-4.jpg" rel="lightbox" title="Some Title">
+          <span class="thumb-screen"></span>
+            <i class="icon ion-ios7-browsers-outline"></i>
+        </a>
+          <figcaption>
+            <strong> Sliding Flippers</strong>
+            <p> Minimalist - Ease of use - Designful </p>
+            <p> Using CSS3 effects </p>
+          </figcaption>
+        </figure>
+      </article> -->
+      <br class="clear"/>
+    </section>
+
+    <section class="spacer">
+      <h2 class="hidden">Dolor sit amet</h2>
+      <p> Final Selection </p>
+    </section>
+
+    <section id="text_columns">
+<!--       <h2 class="hidden">Delivery</h2> -->
+      <article class="column1">
+        <h3>Delivery</h3>
+        <p>These are the finalized modules delivered for the project.</p>
+        <ul>Finalization steps included: 
+          <li>code refactoring</li>
+          <li>responsiveness</li>
+          <li>cross-browser capability</li>
+          <li>cross-device capability</li>
+        </ul>
+      </article>
+
+      <div class="column2">
+        <div class="row">
+          <img src="img/Flyers.png" width="80" class="rocket" alt="Some alt text"/>
+          <ul>
+            <li> minimalist, smooth experence, enticing effect </li>
+            <li> built with CSS, jQuery, javascript </li>
+            <li> tested on ChromeX, FirefoxX, OperaX, SafariX, IE8</li>
+            <li> tested on iPhone5, Android 2.2/2.3 </li>
+          </ul>
+        </div>
+        <div class="row">
+          <h4 class="hidden">Sliders</h4>
+          <img src="img/icon.png" width="80" class="clock" alt="Some alt text"/>
+          <p>WIP</p>
+        </div>
+      </div>
+    </section>
+
+
+    <footer>
+      <h2 class="hidden">Our footer</h2>
+      <section id="misc_footer">
+       <div id="copyright">
+        <div class="wrapper">
+          Copyright: TBC
+        </div>
+       </div>
+      </section>
+
+      <section class="wrapper">
+        <h3 class="hidden">Footer content</h3>
+        <article class="column leftList">
+          <h4>About</h4>
+          This project was made at VideoGenie as part of Hack Reactor curriculum, a 13-week software engineering immersive.
+        </article>
+        <article class="column midlist">
+          <h4>Team</h4>
+          <ul>
+            <li><a href="javascript:void(0)">William Wong</a></li>
+            <li><a href="javascript:void(0)">Stephan da Costa Andrade</a></li>
+          </ul>
+        </article>
+        <article class="column rightlist">
+          <h4>Links</h4>
+          <ul>
+            <li>
+              <a href="javascript:void(0)">
+                <img src="img/example-slide-1sml.jpg" alt="some alt text"/>
+                <span>VideoGenie</span>
+              </a>
+            </li>
+            <li>
+              <a href="javascript:void(0)">
+                <img src="img/example-slide-2sml.jpg" alt="some alt text"/>
+                <span>Hackreactor</span>
+              </a>
+            </li> 
+          </ul>
+        </article>
+      </section>
+
+      <a href="#" class="go-top">Go Top</a>
+      
+    </footer>
+
+  </body>
+
+</html>
+
